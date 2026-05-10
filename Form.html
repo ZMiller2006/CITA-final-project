@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Form</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    .page {
+      width: 850px;
+      min-height: 1050px;
+      padding-top: 38px;
+      position: relative;
+    }
+
+    .title-box {
+      width: 470px;
+      margin: 0 auto;
+      border: 4px solid black;
+      text-align: center;
+      font-size: 58px;
+      padding: 24px 0 30px;
+      box-sizing: border-box;
+    }
+
+    .form-area {
+      margin-top: 58px;
+      padding-left: 12px;
+      width: 690px;
+    }
+
+    .field {
+      margin-bottom: 32px;
+    }
+
+    .short-field {
+      width: 230px;
+    }
+
+    .long-field {
+      width: 685px;
+    }
+
+    label {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .center-label {
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 4px solid black;
+      outline: none;
+      font-size: 22px;
+      padding: 8px;
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    input {
+      height: 45px;
+    }
+
+    textarea {
+      height: 70px;
+      resize: none;
+    }
+
+    .contact-button {
+      position: absolute;
+      left: 19px;
+      bottom: 45px;
+      width: 280px;
+      height: 84px;
+      border: 4px solid black;
+      background: white;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .contact-button:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="title-box">Review Form</div>
+
+    <form class="form-area" action="/submit-review" method="post">
+      <div class="field short-field">
+        <label class="center-label" for="name">Name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <div class="field short-field">
+        <label class="center-label" for="email">Email</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <div class="field short-field">
+        <label class="center-label" for="complaints">Complaints</label>
+        <input type="text" id="complaints" name="complaints" />
+      </div>
+
+      <div class="field long-field">
+        <label for="things">Things you would like to see</label>
+        <textarea id="things" name="things"></textarea>
+      </div>
+
+      <div class="field long-field">
+        <label for="games">Games that YOU(the reader) would recommend</label>
+        <textarea id="games" name="games"></textarea>
+      </div>
+
+      <button class="contact-button" type="button">
+        Contact info/Emails
+      </button>
+    </form>
+  </div>
+</body>
+</html>
